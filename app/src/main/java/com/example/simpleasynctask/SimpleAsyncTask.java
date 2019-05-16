@@ -6,7 +6,7 @@ import android.widget.TextView;
 import java.lang.ref.WeakReference;
 import java.util.Random;
 
-public class SimpleAsyncTask extends AsyncTask<void, void, String> {
+public class SimpleAsyncTask extends AsyncTask <Void, Void, String> {
     private WeakReference<TextView> mTextView;
 
     SimpleAsyncTask(TextView tv) {
@@ -15,7 +15,7 @@ public class SimpleAsyncTask extends AsyncTask<void, void, String> {
 
 
     @Override
-    protected String doInBackground(void... voids) {
+    protected String doInBackground(Void... voids) {
         Random r = new Random();
         int n = r.nextInt(11);
 
